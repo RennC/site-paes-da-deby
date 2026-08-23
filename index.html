@@ -279,54 +279,102 @@
         // EXEMPLO VÁLIDO BRASIL: '5511999999999'
         const WHATSAPP_NUMBER = ''; // <-- EDITE ESTE VALOR CUIDADOSAMENTE
 
-        const PRODUTOS = [
+    const PRODUTOS = [
+    {
+        id: 'p1',
+        nome: 'Pão Rústico',
+        descricao: 'Massa de fermentação natural',
+        opcoes: [
             {
-                id: 'p1',
-                nome: 'Pão Rústico',
-                descricao: 'Massa de fermentação natural',
-                opcoes: [
-                    { nomeOpcao: 'Tradicional', preco: 'R$ 30,00', imagemUrl: 'img/rustico.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-tradicional.jpg' */ },
-                    { nomeOpcao: 'Gorgonzola e Azeitonas Pretas', preco: 'R$ 50,00', imagemUrl: 'img/rustico-gorgonzola.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-gorgonzola.jpg' */ },
-                    { nomeOpcao: 'Baguete (400g)', preco: 'R$ 15,00', imagemUrl: 'img/rustico-baguete.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/baguete.jpg' */ }
-                ]
+                nomeOpcao: 'Tradicional',
+                preco: 'R$ 30,00',
+                imagemUrl: 'img/rustico.jpeg'
             },
             {
-                id: 'p2',
-                nome: 'Pão de forma',
-                descricao: 'Massa de longa fermentação',
-                opcoes: [
-                    { nomeOpcao: 'Tradicional', preco: 'R$ 16,00', imagemUrl: 'img/forma.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-tradicional.jpg' */ },
-                    { nomeOpcao: 'Integral com Sementes', preco: 'R$ 22,00', imagemUrl: 'img/forma-integral.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-integral.jpg' */ }
-                ]
+                nomeOpcao: 'Gorgonzola e Azeitonas Pretas',
+                preco: 'R$ 50,00',
+                imagemUrl: 'img/rustico-gorgonzola.jpeg'
             },
             {
-                id: 'p3',
-                nome: 'Sonho',
-                descricao: 'Massa de longa fermentação',
-                opcoes: [
-                    { nomeOpcao: 'Leite Ninho e Chocolate Branco', preco: 'R$ 10,00', imagemUrl: 'img/sonho.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-ninho.jpg' */ },
-                    { nomeOpcao: 'Doce de Leite', preco: 'R$ 10,00', imagemUrl: 'img/sonho-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-doce-leite.jpg' */ }
-                ]
-            },
-            {
-                id: 'p4',
-                nome: 'Focaccia',
-                descricao: 'Utilização de Azeite Importado',
-                opcoes: [
-                    { nomeOpcao: 'Alecrim e Sal', preco: 'R$ 45,00', imagemUrl: 'img/focaccia.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-alecrim.jpg' */ },
-                    { nomeOpcao: 'Tomate Cereja, Azeitona Preta e Manjericão Fresco', preco: 'R$ 50,00', imagemUrl: 'img/focaccia-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-tomate.jpg' */ }
-                ]
-            },
-            {
-                id: 'p5',
-                nome: 'Croissant',
-                descricao: 'Massa Folheada Artesanal',
-                opcoes: [
-                    { nomeOpcao: 'Tradicional', preco: 'R$ 13,00', imagemUrl: 'img/croassaint.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-tradicional.jpg' */ },
-                    { nomeOpcao: 'Queijo', preco: 'R$ 15,00', imagemUrl: 'img/croassaint-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-queijo.jpg' */ }
-                ]
+                nomeOpcao: 'Baguete (400g)',
+                preco: 'R$ 15,00',
+                imagemUrl: 'img/rustico-baguete.png'
             }
-        ];
+        ]
+    },
+
+    {
+        id: 'p2',
+        nome: 'Pão de forma',
+        descricao: 'Massa de longa fermentação',
+        opcoes: [
+            {
+                nomeOpcao: 'Tradicional',
+                preco: 'R$ 16,00',
+                imagemUrl: 'img/forma.png'
+            },
+            {
+                nomeOpcao: 'Integral com Sementes',
+                preco: 'R$ 22,00',
+                imagemUrl: 'img/forma-integral.png'
+            }
+        ]
+    },
+
+    {
+        id: 'p3',
+        nome: 'Sonho',
+        descricao: 'Massa de longa fermentação',
+        opcoes: [
+            {
+                nomeOpcao: 'Leite Ninho e Chocolate Branco',
+                preco: 'R$ 10,00',
+                imagemUrl: 'img/sonho.jpeg'
+            },
+            {
+                nomeOpcao: 'Doce de Leite',
+                preco: 'R$ 10,00',
+                imagemUrl: 'img/sonho-2.png'
+            }
+        ]
+    },
+
+    {
+        id: 'p4',
+        nome: 'Focaccia',
+        descricao: 'Utilização de Azeite Importado',
+        opcoes: [
+            {
+                nomeOpcao: 'Alecrim e Sal',
+                preco: 'R$ 45,00',
+                imagemUrl: 'img/focaccia.png'
+            },
+            {
+                nomeOpcao: 'Tomate Cereja, Azeitona Preta e Manjericão Fresco',
+                preco: 'R$ 50,00',
+                imagemUrl: 'img/focaccia-2.png'
+            }
+        ]
+    },
+
+    {
+        id: 'p5',
+        nome: 'Croissant',
+        descricao: 'Massa Folheada Artesanal',
+        opcoes: [
+            {
+                nomeOpcao: 'Tradicional',
+                preco: 'R$ 13,00',
+                imagemUrl: 'img/croassaint.png'
+            },
+            {
+                nomeOpcao: 'Queijo',
+                preco: 'R$ 15,00',
+                imagemUrl: 'img/croassaint-2.png'
+            }
+        ]
+    }
+];
         /* ============================================================================================== */
 
         // 1. Estrutura JSON-First para o Catálogo e Troca Dinâmica
