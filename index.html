@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pães da Deby | Fermentação Natural</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Pães da Deby - Panificadora artesanal de fermentação natural. Catálogo de pães rústicos e produtos exclusivos.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration (Design Tokens) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rustic-parchment': '#FAF6F0',
+                        'crust-brown': '#4A2E1B',
+                        'warm-golden': '#D99A5B',
+                        'wood-light': '#E8DAC8'
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom base styles for premium minimalist feel */
+        :root {
+            --safe-top: env(safe-area-inset-top);
+            --safe-bottom: env(safe-area-inset-bottom);
+        }
+
+        body {
+            background-color: #FAF6F0;
+            /* rustic-parchment */
+            color: #4A2E1B;
+            /* crust-brown */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header
+        class="sticky top-0 z-50 bg-rustic-parchment/90 backdrop-blur-md border-b border-wood-light/50 shadow-sm transition-all duration-300"
+        style="padding-top: var(--safe-top);">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+            <!-- Logo + Nome -->
+            <div class="flex items-center gap-4">
+
+                <!-- ÍCONE / LOGO -->
+                <img src="img/icone.png" alt="Logo Pães da Deby"
+                    class="h-14 md:h-16 w-auto object-contain flex-shrink-0">
+
+                <!-- Nome -->
+                <div class="flex flex-col">
+                    <h1 class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-crust-brown leading-none">
+                        Pães da Deby
+                    </h1>
+
+                    <span class="font-sans text-xs md:text-sm tracking-widest uppercase text-warm-golden mt-1">
+                        |Fermentação Longa e Natural
+                    </span>
+                </div>
+
+            </div>
+            <nav class="hidden md:flex space-x-4 lg:space-x-8">
+                <a href="#sobre-mim"
+                    class="font-sans text-sm uppercase tracking-wide hover:text-warm-golden transition-colors duration-200 py-2 px-2">Sobre
+                    Mim</a>
+                <a href="#catalogo"
+                    class="font-sans text-sm uppercase tracking-wide hover:text-warm-golden transition-colors duration-200 py-2 px-2">Cardápio</a>
+                <a href="#sobre"
+                    class="font-sans text-sm uppercase tracking-wide hover:text-warm-golden transition-colors duration-200 py-2 px-2">Feedbacks</a>
+            </nav>
+            <button class="md:hidden text-crust-brown hover:text-warm-golden focus:outline-none transition-colors p-3 -mr-3"
+                aria-label="Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section / Sobre mim -->
+    <section id="sobre-mim" class="relative w-full pt-12 pb-16 md:pt-20 md:pb-24 px-4 sm:px-6">
+
+        <!-- BOX: Reduzido de max-w-6xl para max-w-5xl -->
+        <div class="sobre-box max-w-5xl mx-auto bg-crust-brown rounded-2xl overflow-hidden shadow-lg">
+
+            <div class="flex flex-col md:flex-row items-stretch">
+
+                <!-- FOTO: Reduzida a altura mínima -->
+                <div class="w-full md:w-2/5 min-h-[300px] md:min-h-[400px] overflow-hidden">
+                    <img src="img/deby.png" alt="Foto sobre mim" class="sobre-foto w-full h-full object-cover">
+                </div>
+
+                <!-- TEXTO: Reduzido padding interno, espaçamento e tamanhos de fonte -->
+                <div class="w-full md:w-3/5 p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                    <h2 class="font-serif text-3xl md:text-4xl font-medium text-rustic-parchment leading-tight mb-4">
+                        Sobre mim
+                    </h2>
+
+                    <div
+                        class="font-sans text-sm md:text-base text-rustic-parchment/90 font-light leading-relaxed space-y-3">
+                        <p>O que começou como uma ideia para ter uma renda extra acabou se transformando em uma grande
+                            paixão.</p>
+                        <p>Sempre amei cozinhar, mas foi na panificação que encontrei algo especial.</p>
+                        <p>Hoje, sou apaixonada por panificação artesanal, longa fermentação e levain.</p>
+                        <p>Acredito que um bom pão precisa de tempo, cuidado e é exatamente isso que coloco em cada
+                            receita.</p>
+                        <p>Cada pão é preparado artesanalmente, respeitando o tempo da fermentação e valorizando o
+                            sabor, a textura e a qualidade dos ingredientes.</p>
+                        <p>O que nasceu como uma renda extra se tornou parte de mim. E é uma alegria poder compartilhar
+                            com vocês pães feitos de verdade, com as mãos, com calma e com muito amor. E tudo isso virou
+                            propósito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Estado inicial: box deslocado para a esquerda e invisível */
+        .sobre-box {
+            opacity: 0;
+            transform: translateX(-90px);
+            transition: opacity 0.55s ease, transform 0.65s cubic-bezier(0.22, 0.9, 0.3, 1);
+        }
+
+        /* Dash da esquerda para a direita */
+        .sobre-box.apareceu {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .sobre-box {
+                transition: none;
+                transform: none;
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sobreBox = document.querySelector('.sobre-box');
+
+            if (sobreBox) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            sobreBox.classList.add('apareceu');
+                        } else {
+                            sobreBox.classList.remove('apareceu');
+                        }
+                    });
+                }, {
+                    threshold: 0.15
+                });
+
+                observer.observe(sobreBox);
+            }
+        });
+    </script>
+
+    <!-- Catalog Section -->
+    <main id="catalogo" class="flex-grow w-full px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-10 border-b border-wood-light pb-4">
+                <h3 class="font-serif text-2xl md:text-3xl text-crust-brown">A Nossa Fornada</h3>
+            </div>
+
+            <!-- Grid Structure (Skeleton for dynamic content) -->
+            <!-- Layout mobile-first: 1 column on mobile, 2 on tablet, 3 on desktop -->
+            <div id="catalogo-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <!-- Product Cards will be dynamically injected here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Feedbacks Section -->
+    <section id="sobre" class="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-wood-light/10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <h3 class="font-serif text-3xl md:text-4xl text-crust-brown mb-2">Feedbacks</h3>
+                <p class="font-sans text-sm text-crust-brown/70 uppercase tracking-widest">O que dizem os nossos
+                    clientes</p>
+            </div>
+
+            <div id="carousel-container"
+                class="relative w-full max-w-3xl mx-auto h-[350px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-2xl bg-wood-light/20 shadow-lg border border-wood-light">
+                <!-- Slides will be injected via JS -->
+            </div>
+
+            <!-- Controles do Carrossel -->
+            <div class="flex justify-center gap-6 mt-8">
+                <button id="btn-prev"
+                    class="bg-crust-brown text-rustic-parchment w-12 h-12 flex items-center justify-center rounded-full hover:bg-warm-golden transition-transform hover:-translate-y-1 shadow-md z-10"
+                    aria-label="Anterior">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="btn-next"
+                    class="bg-crust-brown text-rustic-parchment w-12 h-12 flex items-center justify-center rounded-full hover:bg-warm-golden transition-transform hover:-translate-y-1 shadow-md z-10"
+                    aria-label="Próximo">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-wood-light/30 border-t border-wood-light/50 py-12 px-4 mt-auto" style="padding-bottom: calc(3rem + var(--safe-bottom));">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+            <h4 class="font-serif text-xl text-crust-brown mb-4">Pães da Deby</h4>
+            <p class="font-sans text-sm text-crust-brown font-normal mb-8 text-center">
+                Provérbios 16:3 – &ldquo;Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.&rdquo;
+            </p>
+            
+            <!-- Linha inferior: copyright ao centro, Instagram à direita -->
+            <div class="w-full relative flex items-center justify-center pt-2">
+                
+                <!-- Copyright Centralizado -->
+                <p class="font-sans text-xs text-crust-brown/50 uppercase tracking-widest text-center">
+                    &copy; 2026 Pães da Deby. Todos os direitos reservados.
+                </p>
+                
+                <!-- Instagram na Extrema Direita (Position Absolute) -->
+                <a href="https://www.instagram.com/paes_da_deby/" target="_blank" rel="noopener noreferrer"
+                    class="absolute right-0 text-crust-brown/60 hover:text-warm-golden transition-colors duration-300 flex-shrink-0"
+                    aria-label="Instagram Pães da Deby">
+                    <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* =================== ÁREA DE MANUTENÇÃO: ADICIONE OS SEUS PÃES E VÍDEOS AQUI =================== */
+        // ATENÇÃO: COLOQUE AQUI O SEU NÚMERO DE TELEMÓVEL/WHATSAPP. 
+        // OBRIGATÓRIO: DEVE CONTER O CÓDIGO DO PAÍS (EX: 351 PARA PORTUGAL OU 55 PARA BRASIL).
+        // PROIBIDO: SEM ZEROS À ESQUERDA, SEM PARÊNTESES, SEM ESPAÇOS E SEM TRAÇOS. 
+        // EXEMPLO VÁLIDO PORTUGAL: '351912345678'
+        // EXEMPLO VÁLIDO BRASIL: '5511999999999'
+        const WHATSAPP_NUMBER = ''; // <-- EDITE ESTE VALOR CUIDADOSAMENTE
+
+        const PRODUTOS = [
+            {
+                id: 'p1',
+                nome: 'Pão Rústico',
+                descricao: 'Massa de fermentação natural',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 30,00', imagemUrl: 'img/rustico.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-tradicional.jpg' */ },
+                    { nomeOpcao: 'Gorgonzola e Azeitonas Pretas', preco: 'R$ 50,00', imagemUrl: 'img/rustico-gorgonzola.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-gorgonzola.jpg' */ },
+                    { nomeOpcao: 'Baguete (400g)', preco: 'R$ 15,00', imagemUrl: 'img/rustico-baguete.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/baguete.jpg' */ }
+                ]
+            },
+            {
+                id: 'p2',
+                nome: 'Pão de forma',
+                descricao: 'Massa de longa fermentação',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 16,00', imagemUrl: 'img/forma.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-tradicional.jpg' */ },
+                    { nomeOpcao: 'Integral com Sementes', preco: 'R$ 22,00', imagemUrl: 'img/forma-integral.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-integral.jpg' */ }
+                ]
+            },
+            {
+                id: 'p3',
+                nome: 'Sonho',
+                descricao: 'Massa de longa fermentação',
+                opcoes: [
+                    { nomeOpcao: 'Leite Ninho e Chocolate Branco', preco: 'R$ 10,00', imagemUrl: 'img/sonho.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-ninho.jpg' */ },
+                    { nomeOpcao: 'Doce de Leite', preco: 'R$ 10,00', imagemUrl: 'img/sonho-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-doce-leite.jpg' */ }
+                ]
+            },
+            {
+                id: 'p4',
+                nome: 'Focaccia',
+                descricao: 'Utilização de Azeite Importado',
+                opcoes: [
+                    { nomeOpcao: 'Alecrim e Sal', preco: 'R$ 45,00', imagemUrl: 'img/focaccia.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-alecrim.jpg' */ },
+                    { nomeOpcao: 'Tomate Cereja, Azeitona Preta e Manjericão Fresco', preco: 'R$ 50,00', imagemUrl: 'img/focaccia-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-tomate.jpg' */ }
+                ]
+            },
+            {
+                id: 'p5',
+                nome: 'Croissant',
+                descricao: 'Massa Folheada Artesanal',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 13,00', imagemUrl: 'img/croassaint.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-tradicional.jpg' */ },
+                    { nomeOpcao: 'Queijo', preco: 'R$ 15,00', imagemUrl: 'img/croassaint-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-queijo.jpg' */ }
+                ]
+            }
+        ];
+        /* ============================================================================================== */
+
+        // 1. Estrutura JSON-First para o Catálogo e Troca Dinâmica
+        const container = document.getElementById('catalogo-container');
+
+        function renderizarCatalogo() {
+            if (!container) return;
+
+            container.innerHTML = PRODUTOS.map(produto => {
+                const opPadrao = produto.opcoes[0];
+
+                // Lógica de Renderização do Seletor (Obrigatório)
+                const optionsHtml = produto.opcoes.map((op, idx) =>
+                    `<option value="${idx}">${op.nomeOpcao}</option>`
+                ).join('');
+                const selectHtml = `
+            <select class="sabor-selector w-full min-h-[44px] p-3 mb-4 bg-rustic-parchment/50 border border-wood-light rounded-xl text-crust-brown text-sm font-sans focus:outline-none focus:border-warm-golden transition-colors shadow-inner cursor-pointer" data-produto-id="${produto.id}">
+                ${optionsHtml}
+            </select>`;
+
+                // Lógica de Renderização Dinâmica da Imagem
+                const temImagem = opPadrao.imagemUrl && opPadrao.imagemUrl.trim() !== '';
+
+                // Template Principal do Cartão
+                return `
+            <div class="bg-rustic-parchment rounded-2xl p-4 md:p-6 border border-wood-light flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 z-10 relative">
+                
+                <!-- Nova div da imagem: Proporção quadrada (aspect-square), fundo transparente, e sem bordas vazias -->
+                <div class="relative w-full aspect-square mb-6 rounded-xl overflow-hidden group bg-transparent flex items-center justify-center">
+                    
+                    <!-- Ícone Loading / Fallback (Chapéu de Chef) -->
+                    <svg class="absolute inset-0 m-auto w-12 h-12 text-crust-brown/20 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a4 4 0 013.882 3.033A3.5 3.5 0 0119.5 8.5c0 1.258-.66 2.361-1.662 2.984A2 2 0 0118 12v5a2 2 0 01-2 2H8a2 2 0 01-2-2v-5a2 2 0 01.162-.516A3.5 3.5 0 014.5 8.5a3.5 3.5 0 013.618-3.467A4 4 0 0112 2zM8 14h8M8 17h8"></path>
+                    </svg>
+
+                    <img id="img-${produto.id}" src="${opPadrao.imagemUrl}" alt="${produto.nome}" loading="lazy" class="relative z-10 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" style="display: ${temImagem ? 'block' : 'none'};">
+                    <div class="absolute inset-0 bg-crust-brown/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"></div>
+                </div>
+                
+                <h4 class="font-serif text-xl md:text-2xl font-semibold text-crust-brown mb-1">${produto.nome}</h4>
+                <p class="font-sans text-xs text-crust-brown/60 uppercase tracking-widest mb-4">${produto.descricao}</p>
+                <p id="preco-${produto.id}" class="font-sans text-lg md:text-xl text-warm-golden font-bold mb-5">${opPadrao.preco}</p>
+                
+                <div class="flex-grow flex flex-col">
+                    ${selectHtml}
+                </div>
+                
+                <button class="btn-encomendar mt-auto w-full min-h-[48px] bg-crust-brown text-rustic-parchment font-sans text-xs md:text-sm uppercase tracking-widest font-semibold py-4 px-2 rounded-xl hover:bg-warm-golden hover:text-crust-brown transition-colors duration-300 shadow-md flex items-center justify-center gap-2" data-produto-id="${produto.id}">
+                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        <path d="M12.05 2C6.495 2 2.05 6.445 2.05 12c0 1.943.542 3.76 1.482 5.311L2 22l4.833-1.486A9.95 9.95 0 0012.05 22c5.555 0 10-4.445 10-10S17.605 2 12.05 2zm0 18.2c-1.72 0-3.328-.478-4.706-1.306l-.337-.2-3.503 1.077 1.11-3.397-.22-.35A8.15 8.15 0 013.85 12c0-4.52 3.68-8.2 8.2-8.2S20.25 7.48 20.25 12s-3.68 8.2-8.2 8.2z"/>
+                    </svg>
+                    <span>Encomendar via WhatsApp</span>
+                </button>
+            </div>
+        `;
+            }).join('');
+
+            // Ligação do Event Listener (Troca Dinâmica Completa)
+            document.querySelectorAll('.sabor-selector').forEach(selector => {
+                selector.addEventListener('change', (e) => {
+                    const produtoId = e.target.getAttribute('data-produto-id');
+                    const produto = PRODUTOS.find(p => p.id === produtoId);
+                    const indexSabor = parseInt(e.target.value);
+
+                    if (produto && produto.opcoes[indexSabor]) {
+                        const opcaoSelecionada = produto.opcoes[indexSabor];
+
+                        // A) Atualizar o Preço
+                        const precoElement = document.getElementById(`preco-${produtoId}`);
+                        if (precoElement) {
+                            precoElement.textContent = opcaoSelecionada.preco;
+                        }
+
+                        // B) Transição Visual Suave na tag IMG
+                        const imgElement = document.getElementById(`img-${produtoId}`);
+                        if (imgElement) {
+                            imgElement.style.opacity = 0;
+                            setTimeout(() => {
+                                imgElement.src = opcaoSelecionada.imagemUrl;
+                                if (opcaoSelecionada.imagemUrl && opcaoSelecionada.imagemUrl.trim() !== '') {
+                                    imgElement.style.display = 'block';
+                                    imgElement.onload = () => { imgElement.style.opacity = 1; };
+                                } else {
+                                    imgElement.style.display = 'none';
+                                    imgElement.style.opacity = 1;
+                                }
+                            }, 300);
+                        }
+                    }
+                });
+            });
+
+            // Ligação do Event Listener (Interceptação do Click-to-Chat)
+            document.querySelectorAll('.btn-encomendar').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const targetBtn = e.currentTarget;
+                    const produtoId = targetBtn.getAttribute('data-produto-id');
+                    const produto = PRODUTOS.find(p => p.id === produtoId);
+                    if (!produto) return;
+
+                    // Determinar a opção selecionada
+                    let opcaoSelecionadaStr = produto.opcoes[0] ? produto.opcoes[0].nomeOpcao : '';
+                    const card = targetBtn.closest('div');
+                    const selector = card.querySelector('.sabor-selector');
+
+                    if (selector) {
+                        const indexSabor = parseInt(selector.value);
+                        opcaoSelecionadaStr = produto.opcoes[indexSabor].nomeOpcao;
+                    }
+
+                    // Concatenação Matemática: Produto + Opção selecionada
+                    const produtoX = `${produto.nome} - ${opcaoSelecionadaStr}`;
+                    encomendarWhatsApp(produtoX);
+                });
+            });
+        }
+
+        // 2. Sistema Transacional Roteado
+        function encomendarWhatsApp(produtoX) {
+            // Construção estrita da cadeia de carateres requerida
+            const mensagemBruta = `Olá, tenho interesse em comprar o ${produtoX}, para qual dia a minha encomenda pode ser realizada?`;
+
+            // Aplicação obrigatória da função de encoding
+            const mensagemCodificada = encodeURIComponent(mensagemBruta);
+
+            // Nota: Links curtos (wa.link) não suportam mensagens dinâmicas por padrão. 
+            // Resolvemos o seu link para o número oficial para garantir que o texto do produto funcione.
+            const linkWhatsApp = `https://wa.me/5511957000871?text=${mensagemCodificada}`;
+            window.open(linkWhatsApp, '_blank', 'noopener,noreferrer');
+        }
+
+
+        // ============================================================================
+        // LÓGICA DO CARROSSEL DE FEEDBACKS
+        // ============================================================================
+        const FEEDBACKS = [
+            { url: 'img/Feedbacks/1e29ebf8-4baa-4ed8-b44d-ae3b1d6995cf.jpg' },
+            { url: 'img/Feedbacks/2420A91C-0AFC-4422-96CB-58055201AB47.jpg' },
+            { url: 'img/Feedbacks/2ae53bec-cc04-48ad-9d0a-b1a9e4af2739.jpg' },
+            { url: 'img/Feedbacks/69CEC21C-6029-4757-B03E-2EEAF9295090.jpg' },
+            { url: 'img/Feedbacks/9D1F2A24-790A-4039-9D3C-FAC0F235A486.jpg' },
+            { url: 'img/Feedbacks/IMG_2584.png' },
+            { url: 'img/Feedbacks/IMG_2585.png' },
+            { url: 'img/Feedbacks/IMG_2596.png' },
+            { url: 'img/Feedbacks/IMG_2649.png' },
+            { url: 'img/Feedbacks/IMG_3370.png' },
+            { url: 'img/Feedbacks/IMG_3371.png' },
+            { url: 'img/Feedbacks/IMG_3372.png' },
+            { url: 'img/Feedbacks/IMG_3373.png' },
+            { url: 'img/Feedbacks/IMG_3443.png' },
+            { url: 'img/Feedbacks/IMG_3445.png' },
+            { url: 'img/Feedbacks/IMG_3552.png' },
+            { url: 'img/Feedbacks/IMG_3589.png' }
+        ];
+
+        function initCarousel() {
+            const container = document.getElementById('carousel-container');
+            if (!container || FEEDBACKS.length === 0) return;
+
+            let currentIndex = 0;
+            let timer = null;
+
+            // 1. Criar os slides dinamicamente baseados no Array FEEDBACKS
+            const slides = FEEDBACKS.map((fb, idx) => {
+                const slide = document.createElement('div');
+                slide.className = `absolute top-0 left-0 w-full h-full flex items-center justify-center p-4 transition-transform duration-700 ease-in-out`;
+                slide.style.transform = idx === 0 ? 'translateX(0%)' : 'translateX(100%)';
+
+                const img = document.createElement('img');
+                img.className = 'max-w-full max-h-full object-contain rounded-xl shadow-sm';
+
+                if (fb.url && fb.url.trim() !== '') {
+                    img.src = fb.url;
+                } else {
+                    img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="%23e8dac8"><rect width="100%" height="100%"/></svg>';
+                    const aviso = document.createElement('span');
+                    aviso.className = 'absolute text-crust-brown/50 font-serif z-10';
+                    aviso.innerText = 'Sem Print';
+                    slide.appendChild(aviso);
+                }
+                slide.appendChild(img);
+
+                container.appendChild(slide);
+                return slide;
+            });
+
+            // 2. Animação de Transição (Sliding)
+            function showSlide(index, direction = 'next') {
+                if (currentIndex === index) return;
+
+                const currentSlide = slides[currentIndex];
+                const nextSlide = slides[index];
+
+                // Preparar slide de entrada sem animação (para posicioná-lo no lugar certo antes do deslize)
+                nextSlide.style.transition = 'none';
+                nextSlide.style.transform = direction === 'next' ? 'translateX(100%)' : 'translateX(-100%)';
+
+                // Forçar reflow do browser para renderizar a posição sem animação
+                void nextSlide.offsetWidth;
+
+                // Reativar animação
+                nextSlide.style.transition = 'transform 700ms ease-in-out';
+
+                // Deslizar para a esquerda ou direita
+                currentSlide.style.transform = direction === 'next' ? 'translateX(-100%)' : 'translateX(100%)';
+                nextSlide.style.transform = 'translateX(0%)';
+
+                pauseCurrentSlide();
+                currentIndex = index;
+                playCurrentSlide();
+            }
+
+            function pauseCurrentSlide() {
+                if (timer) clearTimeout(timer);
+            }
+
+            function playCurrentSlide() {
+                // Cada slide permanece estático por 15 segundos antes de avançar automaticamente
+                timer = setTimeout(() => advanceSlide('next'), 5000);
+            }
+
+            function advanceSlide(direction) {
+                const nextIdx = direction === 'next'
+                    ? (currentIndex + 1) % slides.length
+                    : (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(nextIdx, direction);
+            }
+
+            // Botões físicos: ao clicar, a seta troca o slide e reinicia o contador de 5 segundos
+            const btnNext = document.getElementById('btn-next');
+            const btnPrev = document.getElementById('btn-prev');
+            if (btnNext) btnNext.addEventListener('click', () => { pauseCurrentSlide(); advanceSlide('next'); });
+            if (btnPrev) btnPrev.addEventListener('click', () => { pauseCurrentSlide(); advanceSlide('prev'); });
+
+            // Iniciar o primeiro slide
+            playCurrentSlide();
+        }
+
+        // Inicialização da Arquitetura Front-End (Zero-Build Step)
+        document.addEventListener('DOMContentLoaded', () => {
+            renderizarCatalogo();
+            initCarousel();
+        });
+    </script>
+</body>
+
+</html>
