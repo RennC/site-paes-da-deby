@@ -97,14 +97,31 @@
                 <a href="#sobre"
                     class="font-sans text-sm uppercase tracking-wide hover:text-warm-golden transition-colors duration-200 py-2 px-2">Feedbacks</a>
             </nav>
-            <button class="md:hidden text-crust-brown hover:text-warm-golden focus:outline-none transition-colors p-3 -mr-3"
-                aria-label="Menu">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h7">
-                    </path>
-                </svg>
-            </button>
+            <div class="flex items-center gap-1 md:gap-4">
+                <!-- Ícone do Carrinho -->
+                <button id="btn-cart-toggle"
+                    class="relative text-crust-brown hover:text-warm-golden transition-colors p-2"
+                    aria-label="Abrir Carrinho">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <span id="cart-badge"
+                        class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-red-600 rounded-full hidden shadow-sm">0</span>
+                </button>
+
+                <button
+                    class="md:hidden text-crust-brown hover:text-warm-golden focus:outline-none transition-colors p-2"
+                    aria-label="Menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 6h16M4 12h16M4 18h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -241,34 +258,103 @@
         </div>
     </section>
 
-<!-- Footer -->
-    <footer class="bg-wood-light/30 border-t border-wood-light/50 py-12 px-4 mt-auto" style="padding-bottom: calc(3rem + var(--safe-bottom));">
+    <!-- Footer -->
+    <footer class="bg-wood-light/30 border-t border-wood-light/50 py-12 px-4 mt-auto"
+        style="padding-bottom: calc(3rem + var(--safe-bottom));">
         <div class="max-w-3xl mx-auto flex flex-col items-center">
             <h4 class="font-serif text-xl text-crust-brown mb-4">Pães da Deby</h4>
             <p class="font-sans text-sm text-crust-brown font-normal mb-8 text-center">
-                Provérbios 16:3 – &ldquo;Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.&rdquo;
+                Provérbios 16:3 – &ldquo;Consagre ao Senhor tudo o que você faz, e os seus planos serão
+                bem-sucedidos.&rdquo;
             </p>
-            
+
             <!-- Linha inferior: copyright ao centro, Instagram à direita -->
             <div class="w-full relative flex items-center justify-center pt-2">
-                
+
                 <!-- Copyright Centralizado -->
                 <p class="font-sans text-xs text-crust-brown/50 uppercase tracking-widest text-center">
                     &copy; 2026 Pães da Deby. Todos os direitos reservados.
                 </p>
-                
+
                 <!-- Instagram na Extrema Direita (Position Absolute) -->
                 <a href="https://www.instagram.com/paes_da_deby/" target="_blank" rel="noopener noreferrer"
                     class="absolute right-0 text-crust-brown/60 hover:text-warm-golden transition-colors duration-300 flex-shrink-0"
                     aria-label="Instagram Pães da Deby">
-                    <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                 </a>
-                
+
             </div>
         </div>
     </footer>
+
+    <!-- Overlay do Carrinho -->
+    <div id="cart-overlay"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Sidebar do Carrinho -->
+    <div id="cart-sidebar"
+        class="fixed right-0 top-0 h-full w-full md:w-[400px] bg-rustic-parchment shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 flex flex-col"
+        style="padding-top: var(--safe-top); padding-bottom: var(--safe-bottom);">
+        <!-- Cabeçalho do Carrinho -->
+        <div class="px-6 py-5 border-b border-wood-light/50 flex items-center justify-between bg-rustic-parchment">
+            <h2 class="font-serif text-2xl font-semibold text-crust-brown flex items-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                Carrinho
+            </h2>
+            <button id="btn-close-cart" class="text-crust-brown hover:text-warm-golden transition-colors p-2 -mr-2"
+                aria-label="Fechar Carrinho">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Itens do Carrinho -->
+        <div id="cart-items-container" class="flex-grow overflow-y-auto px-6 py-4 space-y-4">
+            <!-- State Vazio -->
+            <div id="cart-empty-state"
+                class="flex flex-col items-center justify-center h-full text-crust-brown/50 hidden">
+                <svg class="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+                <p class="font-sans text-lg font-medium">O seu carrinho está vazio.</p>
+            </div>
+        </div>
+
+        <!-- Rodapé do Carrinho -->
+        <div class="p-6 border-t border-wood-light/50 bg-rustic-parchment">
+            <div class="flex justify-between items-center mb-5">
+                <span class="font-sans text-sm text-crust-brown uppercase tracking-widest font-semibold">Total
+                    Estimado</span>
+                <span id="cart-total" class="font-serif text-2xl font-bold text-warm-golden">R$ 0,00</span>
+            </div>
+            <button id="btn-checkout"
+                class="w-full min-h-[56px] bg-crust-brown text-rustic-parchment font-sans text-sm uppercase tracking-widest font-semibold py-4 px-4 rounded-xl hover:bg-warm-golden hover:text-crust-brown transition-colors duration-300 shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                        d="M12.05 2C6.495 2 2.05 6.445 2.05 12c0 1.943.542 3.76 1.482 5.311L2 22l4.833-1.486A9.95 9.95 0 0012.05 22c5.555 0 10-4.445 10-10S17.605 2 12.05 2zm0 18.2c-1.72 0-3.328-.478-4.706-1.306l-.337-.2-3.503 1.077 1.11-3.397-.22-.35A8.15 8.15 0 013.85 12c0-4.52 3.68-8.2 8.2-8.2S20.25 7.48 20.25 12s-3.68 8.2-8.2 8.2z" />
+                </svg>
+                <span>Finalizar Encomenda</span>
+            </button>
+        </div>
+    </div>
 
     <script>
         /* =================== ÁREA DE MANUTENÇÃO: ADICIONE OS SEUS PÃES E VÍDEOS AQUI =================== */
@@ -277,104 +363,56 @@
         // PROIBIDO: SEM ZEROS À ESQUERDA, SEM PARÊNTESES, SEM ESPAÇOS E SEM TRAÇOS. 
         // EXEMPLO VÁLIDO PORTUGAL: '351912345678'
         // EXEMPLO VÁLIDO BRASIL: '5511999999999'
-        const WHATSAPP_NUMBER = ''; // <-- EDITE ESTE VALOR CUIDADOSAMENTE
+        const WHATSAPP_NUMBER = '5511957000871'; // <-- EDITE ESTE VALOR CUIDADOSAMENTE
 
-    const PRODUTOS = [
-    {
-        id: 'p1',
-        nome: 'Pão Rústico',
-        descricao: 'Massa de fermentação natural',
-        opcoes: [
+        const PRODUTOS = [
             {
-                nomeOpcao: 'Tradicional',
-                preco: 'R$ 30,00',
-                imagemUrl: 'img/rustico.jpeg'
+                id: 'p1',
+                nome: 'Pão Rústico',
+                descricao: 'Massa de fermentação natural',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 30,00', imagemUrl: 'img/rustico.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-tradicional.jpg' */ },
+                    { nomeOpcao: 'Gorgonzola e Azeitonas Pretas', preco: 'R$ 50,00', imagemUrl: 'img/rustico-gorgonzola.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-rustico-gorgonzola.jpg' */ },
+                    { nomeOpcao: 'Baguete (400g)', preco: 'R$ 15,00', imagemUrl: 'img/rustico-baguete.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/baguete.jpg' */ }
+                ]
             },
             {
-                nomeOpcao: 'Gorgonzola e Azeitonas Pretas',
-                preco: 'R$ 50,00',
-                imagemUrl: 'img/rustico-gorgonzola.jpeg'
+                id: 'p2',
+                nome: 'Pão de forma',
+                descricao: 'Massa de longa fermentação',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 16,00', imagemUrl: 'img/forma.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-tradicional.jpg' */ },
+                    { nomeOpcao: 'Integral com Sementes', preco: 'R$ 22,00', imagemUrl: 'img/forma-integral.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/pao-forma-integral.jpg' */ }
+                ]
             },
             {
-                nomeOpcao: 'Baguete (400g)',
-                preco: 'R$ 15,00',
-                imagemUrl: 'img/rustico-baguete.png'
+                id: 'p3',
+                nome: 'Sonho',
+                descricao: 'Massa de longa fermentação',
+                opcoes: [
+                    { nomeOpcao: 'Leite Ninho e Chocolate Branco', preco: 'R$ 10,00', imagemUrl: 'img/sonho.JPEG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-ninho.jpg' */ },
+                    { nomeOpcao: 'Doce de Leite', preco: 'R$ 10,00', imagemUrl: 'img/sonho-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/sonho-doce-leite.jpg' */ }
+                ]
+            },
+            {
+                id: 'p4',
+                nome: 'Focaccia',
+                descricao: 'Utilização de Azeite Importado',
+                opcoes: [
+                    { nomeOpcao: 'Alecrim e Sal', preco: 'R$ 45,00', imagemUrl: 'img/focaccia.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-alecrim.jpg' */ },
+                    { nomeOpcao: 'Tomate Cereja, Azeitona Preta e Manjericão Fresco', preco: 'R$ 50,00', imagemUrl: 'img/focaccia-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/focaccia-tomate.jpg' */ }
+                ]
+            },
+            {
+                id: 'p5',
+                nome: 'Croissant',
+                descricao: 'Massa Folheada Artesanal',
+                opcoes: [
+                    { nomeOpcao: 'Tradicional', preco: 'R$ 13,00', imagemUrl: 'img/croassaint.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-tradicional.jpg' */ },
+                    { nomeOpcao: 'Queijo', preco: 'R$ 15,00', imagemUrl: 'img/croassaint-2.PNG' /* INSIRA AQUI O NOME DO ARQUIVO DA FOTO. Ex: 'img/croissant-queijo.jpg' */ }
+                ]
             }
-        ]
-    },
-
-    {
-        id: 'p2',
-        nome: 'Pão de forma',
-        descricao: 'Massa de longa fermentação',
-        opcoes: [
-            {
-                nomeOpcao: 'Tradicional',
-                preco: 'R$ 16,00',
-                imagemUrl: 'img/forma.png'
-            },
-            {
-                nomeOpcao: 'Integral com Sementes',
-                preco: 'R$ 22,00',
-                imagemUrl: 'img/forma-integral.png'
-            }
-        ]
-    },
-
-    {
-        id: 'p3',
-        nome: 'Sonho',
-        descricao: 'Massa de longa fermentação',
-        opcoes: [
-            {
-                nomeOpcao: 'Leite Ninho e Chocolate Branco',
-                preco: 'R$ 10,00',
-                imagemUrl: 'img/sonho.jpeg'
-            },
-            {
-                nomeOpcao: 'Doce de Leite',
-                preco: 'R$ 10,00',
-                imagemUrl: 'img/sonho-2.png'
-            }
-        ]
-    },
-
-    {
-        id: 'p4',
-        nome: 'Focaccia',
-        descricao: 'Utilização de Azeite Importado',
-        opcoes: [
-            {
-                nomeOpcao: 'Alecrim e Sal',
-                preco: 'R$ 45,00',
-                imagemUrl: 'img/focaccia.png'
-            },
-            {
-                nomeOpcao: 'Tomate Cereja, Azeitona Preta e Manjericão Fresco',
-                preco: 'R$ 50,00',
-                imagemUrl: 'img/focaccia-2.png'
-            }
-        ]
-    },
-
-    {
-        id: 'p5',
-        nome: 'Croissant',
-        descricao: 'Massa Folheada Artesanal',
-        opcoes: [
-            {
-                nomeOpcao: 'Tradicional',
-                preco: 'R$ 13,00',
-                imagemUrl: 'img/croassaint.png'
-            },
-            {
-                nomeOpcao: 'Queijo',
-                preco: 'R$ 15,00',
-                imagemUrl: 'img/croassaint-2.png'
-            }
-        ]
-    }
-];
+        ];
         /* ============================================================================================== */
 
         // 1. Estrutura JSON-First para o Catálogo e Troca Dinâmica
@@ -422,12 +460,11 @@
                     ${selectHtml}
                 </div>
                 
-                <button class="btn-encomendar mt-auto w-full min-h-[48px] bg-crust-brown text-rustic-parchment font-sans text-xs md:text-sm uppercase tracking-widest font-semibold py-4 px-2 rounded-xl hover:bg-warm-golden hover:text-crust-brown transition-colors duration-300 shadow-md flex items-center justify-center gap-2" data-produto-id="${produto.id}">
-                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                        <path d="M12.05 2C6.495 2 2.05 6.445 2.05 12c0 1.943.542 3.76 1.482 5.311L2 22l4.833-1.486A9.95 9.95 0 0012.05 22c5.555 0 10-4.445 10-10S17.605 2 12.05 2zm0 18.2c-1.72 0-3.328-.478-4.706-1.306l-.337-.2-3.503 1.077 1.11-3.397-.22-.35A8.15 8.15 0 013.85 12c0-4.52 3.68-8.2 8.2-8.2S20.25 7.48 20.25 12s-3.68 8.2-8.2 8.2z"/>
+                <button class="btn-adicionar-carrinho mt-auto w-full min-h-[48px] bg-crust-brown text-rustic-parchment font-sans text-xs md:text-sm uppercase tracking-widest font-semibold py-4 px-2 rounded-xl hover:bg-warm-golden hover:text-crust-brown transition-colors duration-300 shadow-md flex items-center justify-center gap-2" data-produto-id="${produto.id}">
+                    <svg class="w-5 h-5 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
-                    <span>Encomendar via WhatsApp</span>
+                    <span>Adicionar ao Carrinho</span>
                 </button>
             </div>
         `;
@@ -468,42 +505,230 @@
                 });
             });
 
-            // Ligação do Event Listener (Interceptação do Click-to-Chat)
-            document.querySelectorAll('.btn-encomendar').forEach(btn => {
+            // Ligação do Event Listener (Adicionar ao Carrinho)
+            document.querySelectorAll('.btn-adicionar-carrinho').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     const targetBtn = e.currentTarget;
                     const produtoId = targetBtn.getAttribute('data-produto-id');
                     const produto = PRODUTOS.find(p => p.id === produtoId);
                     if (!produto) return;
 
-                    // Determinar a opção selecionada
-                    let opcaoSelecionadaStr = produto.opcoes[0] ? produto.opcoes[0].nomeOpcao : '';
                     const card = targetBtn.closest('div');
                     const selector = card.querySelector('.sabor-selector');
+                    let indexSabor = 0;
 
                     if (selector) {
-                        const indexSabor = parseInt(selector.value);
-                        opcaoSelecionadaStr = produto.opcoes[indexSabor].nomeOpcao;
+                        indexSabor = parseInt(selector.value);
                     }
 
-                    // Concatenação Matemática: Produto + Opção selecionada
-                    const produtoX = `${produto.nome} - ${opcaoSelecionadaStr}`;
-                    encomendarWhatsApp(produtoX);
+                    adicionarItemCarrinho(produto, indexSabor);
+
+                    // Feedback visual simples
+                    const originalText = targetBtn.querySelector('span').innerText;
+                    const icon = targetBtn.querySelector('svg');
+
+                    targetBtn.querySelector('span').innerText = 'Adicionado!';
+                    targetBtn.classList.add('bg-warm-golden', 'text-crust-brown');
+                    icon.classList.add('rotate-90', 'scale-110');
+
+                    setTimeout(() => {
+                        targetBtn.querySelector('span').innerText = originalText;
+                        targetBtn.classList.remove('bg-warm-golden', 'text-crust-brown');
+                        icon.classList.remove('rotate-90', 'scale-110');
+                    }, 1500);
                 });
             });
         }
 
-        // 2. Sistema Transacional Roteado
-        function encomendarWhatsApp(produtoX) {
-            // Construção estrita da cadeia de carateres requerida
-            const mensagemBruta = `Olá, tenho interesse em comprar o ${produtoX}, para qual dia a minha encomenda pode ser realizada?`;
+        // ============================================================================
+        // LÓGICA DO CARRINHO DE COMPRAS
+        // ============================================================================
+        let carrinho = JSON.parse(localStorage.getItem('carrinhoPaesDeby')) || [];
 
-            // Aplicação obrigatória da função de encoding
+        function parsePreco(precoStr) {
+            return parseFloat(precoStr.replace('R$', '').replace(/\./g, '').replace(',', '.').trim());
+        }
+
+        function formatarPreco(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function salvarCarrinho() {
+            localStorage.setItem('carrinhoPaesDeby', JSON.stringify(carrinho));
+            renderizarCarrinho();
+        }
+
+        function adicionarItemCarrinho(produto, indexSabor) {
+            const idItem = `${produto.id}-${indexSabor}`;
+            const opcao = produto.opcoes[indexSabor];
+
+            const itemExistente = carrinho.find(item => item.idItem === idItem);
+
+            if (itemExistente) {
+                itemExistente.quantidade += 1;
+            } else {
+                carrinho.push({
+                    idItem: idItem,
+                    produtoId: produto.id,
+                    nome: produto.nome,
+                    sabor: opcao.nomeOpcao,
+                    precoUnitario: parsePreco(opcao.preco),
+                    imagemUrl: opcao.imagemUrl,
+                    quantidade: 1
+                });
+            }
+
+            salvarCarrinho();
+            abrirCarrinho();
+        }
+
+        // Torna as funções globais para serem chamadas pelos onclick no HTML dinâmico
+        window.alterarQuantidade = function (idItem, delta) {
+            const itemIndex = carrinho.findIndex(item => item.idItem === idItem);
+            if (itemIndex > -1) {
+                carrinho[itemIndex].quantidade += delta;
+                if (carrinho[itemIndex].quantidade <= 0) {
+                    carrinho.splice(itemIndex, 1);
+                }
+                salvarCarrinho();
+            }
+        };
+
+        window.removerItem = function (idItem) {
+            carrinho = carrinho.filter(item => item.idItem !== idItem);
+            salvarCarrinho();
+        };
+
+        function renderizarCarrinho() {
+            const container = document.getElementById('cart-items-container');
+            const emptyState = document.getElementById('cart-empty-state');
+            const badge = document.getElementById('cart-badge');
+            const totalElement = document.getElementById('cart-total');
+            const btnCheckout = document.getElementById('btn-checkout');
+
+            if (!container) return; // Garantir que os elementos existem
+
+            let totalItens = 0;
+            let valorTotal = 0;
+
+            // Limpar itens existentes (mantendo o empty state)
+            const itensRenderizados = container.querySelectorAll('.cart-item');
+            itensRenderizados.forEach(item => item.remove());
+
+            if (carrinho.length === 0) {
+                emptyState.classList.remove('hidden');
+                badge.classList.add('hidden');
+                btnCheckout.disabled = true;
+            } else {
+                emptyState.classList.add('hidden');
+                badge.classList.remove('hidden');
+                btnCheckout.disabled = false;
+
+                carrinho.forEach(item => {
+                    totalItens += item.quantidade;
+                    valorTotal += (item.precoUnitario * item.quantidade);
+
+                    const itemHtml = `
+                        <div class="cart-item flex gap-4 bg-white p-3 rounded-xl border border-wood-light/50 shadow-sm relative transition-all">
+                            <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-rustic-parchment relative">
+                                ${item.imagemUrl && item.imagemUrl.trim() !== '' ?
+                            `<img src="${item.imagemUrl}" alt="${item.nome}" class="w-full h-full object-cover">` :
+                            `<div class="w-full h-full flex items-center justify-center"><svg class="w-6 h-6 text-crust-brown/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div>`
+                        }
+                            </div>
+                            <div class="flex-grow flex flex-col justify-between py-1">
+                                <div>
+                                    <h5 class="font-serif font-bold text-crust-brown leading-tight pr-6">${item.nome}</h5>
+                                    <span class="font-sans text-xs text-crust-brown/70 mt-0.5 line-clamp-1">${item.sabor}</span>
+                                </div>
+                                <div class="mt-2 flex items-center justify-between">
+                                    <span class="font-sans font-bold text-warm-golden text-sm">${formatarPreco(item.precoUnitario)}</span>
+                                    
+                                    <div class="flex items-center gap-2 bg-rustic-parchment rounded-lg px-1.5 py-1 border border-wood-light/50">
+                                        <button onclick="alterarQuantidade('${item.idItem}', -1)" class="text-crust-brown hover:text-warm-golden transition-colors focus:outline-none p-1">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                                        </button>
+                                        <span class="font-sans text-xs font-semibold text-crust-brown w-4 text-center select-none">${item.quantidade}</span>
+                                        <button onclick="alterarQuantidade('${item.idItem}', 1)" class="text-crust-brown hover:text-warm-golden transition-colors focus:outline-none p-1">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="removerItem('${item.idItem}')" class="absolute top-2 right-2 text-crust-brown/40 hover:text-red-500 transition-colors p-1.5 bg-white rounded-full focus:outline-none" aria-label="Remover item">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                            </button>
+                        </div>
+                    `;
+                    container.insertAdjacentHTML('beforeend', itemHtml);
+                });
+            }
+
+            badge.innerText = totalItens;
+            // Se houver mais de 99 itens, exibe 99+
+            if (totalItens > 99) badge.innerText = '99+';
+
+            totalElement.innerText = formatarPreco(valorTotal);
+        }
+
+        function toggleCarrinho(forceState) {
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+            if (!sidebar || !overlay) return;
+
+            const isOpen = !sidebar.classList.contains('translate-x-full');
+            const newState = forceState !== undefined ? forceState : !isOpen;
+
+            if (newState) {
+                // Abrir
+                sidebar.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                // Timeout para permitir que o display block do hidden ocorra antes do opacity (transição)
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        overlay.classList.remove('opacity-0');
+                        overlay.classList.add('opacity-100');
+                    });
+                });
+                document.body.style.overflow = 'hidden'; // Prevenir scroll do fundo
+            } else {
+                // Fechar
+                sidebar.classList.add('translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300); // Tempo da transição
+                document.body.style.overflow = '';
+            }
+        }
+
+        function abrirCarrinho() {
+            toggleCarrinho(true);
+        }
+
+        function fecharCarrinho() {
+            toggleCarrinho(false);
+        }
+
+        function finalizarEncomenda() {
+            if (carrinho.length === 0) return;
+
+            let mensagemBruta = "Olá, tenho interesse em comprar:\n\n";
+
+            let valorTotal = 0;
+            carrinho.forEach(item => {
+                const termoUnidade = item.quantidade === 1 ? 'unidade' : 'unidades';
+                mensagemBruta += `-> ${item.quantidade} ${termoUnidade} de: ${item.nome} - ${item.sabor}\n\n`;
+                valorTotal += (item.precoUnitario * item.quantidade);
+            });
+
+            mensagemBruta += `Valor total estimado: ${formatarPreco(valorTotal)}\n\nPara qual dia a minha encomenda pode ser realizada?`;
+
             const mensagemCodificada = encodeURIComponent(mensagemBruta);
+            // Uso da variável WHATSAPP_NUMBER que já existe no topo do arquivo.
+            const linkWhatsApp = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensagemCodificada}`;
 
-            // Nota: Links curtos (wa.link) não suportam mensagens dinâmicas por padrão. 
-            // Resolvemos o seu link para o número oficial para garantir que o texto do produto funcione.
-            const linkWhatsApp = `https://wa.me/5511957000871?text=${mensagemCodificada}`;
             window.open(linkWhatsApp, '_blank', 'noopener,noreferrer');
         }
 
@@ -618,6 +843,20 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderizarCatalogo();
             initCarousel();
+
+            // Eventos do Carrinho
+            const btnCartToggle = document.getElementById('btn-cart-toggle');
+            const btnCloseCart = document.getElementById('btn-close-cart');
+            const overlay = document.getElementById('cart-overlay');
+            const btnCheckout = document.getElementById('btn-checkout');
+
+            if (btnCartToggle) btnCartToggle.addEventListener('click', () => toggleCarrinho());
+            if (btnCloseCart) btnCloseCart.addEventListener('click', fecharCarrinho);
+            if (overlay) overlay.addEventListener('click', fecharCarrinho);
+            if (btnCheckout) btnCheckout.addEventListener('click', finalizarEncomenda);
+
+            // Renderizar estado inicial
+            renderizarCarrinho();
         });
     </script>
 </body>
